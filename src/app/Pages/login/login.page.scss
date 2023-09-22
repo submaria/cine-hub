@@ -1,0 +1,127 @@
+.info-1 {
+  font-size: 14px;
+  color: #999;
+  cursor: pointer;
+  display: inline-flex;
+};
+
+.info-1 span {
+  color: blue;
+};
+
+.alertCtrl {
+  --background: var(--ion-background-color);
+};
+
+.formCss {
+  font: message-box;
+  font-size: 12px;
+  font-weight: bold;
+  color: red;
+  border-radius: 0px 0px 10px 10px;
+  background-color: #f2dede;
+  padding: 10px;
+};
+
+.img-login {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 50%;
+};
+
+.card-center {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+};
+
+.card {
+  width: 30%;
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(5px);
+};
+
+
+.loginForm {
+  padding: 20px;
+};
+
+.background {
+  // background-color: #f2f2f2 !important;
+  background: url('../../../assets/images/background.png') no-repeat 0 0/100% 100% !important;
+};
+
+// Mobile
+@media only screen and (max-width: 480px),
+only screen and (max-device-width: 480px) {
+  .card {
+    width: 100% !important;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+  }
+};
+
+@media only screen and (max-device-width: 640px) {
+  .card {
+    width: 100% !important;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+  }
+
+};
+
+// Ipad e tablets
+@media only screen and (max-device-width: 768px) {
+  .card {
+    width: 100% !important;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+  }
+};
+
+@media only screen and (max-device-width: 820px) {
+  .card {
+    width: 80% !important;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+  }
+};
+
+@media (min-width:961px)  {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .background {
+    background: #f2f2f2 !important;
+  };
+ }
+@media (min-width:1025px) {
+ /* big landscape tablets, laptops, and desktops */
+ .background {
+  background: #f2f2f2 !important;
+};
+}
+@media (min-width:1281px) {
+ /* hi-res laptops and desktops */
+ .background {
+  background: #f2f2f2 !important;
+};
+}
+
+.bottom-right {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  color: darkgray;
+  height: 40px;
+  padding: 5px;
+};
+
+#usuario {
+  text-transform: uppercase;
+};
+
+ion-item {
+  --ion-item-background: transparent;
+}

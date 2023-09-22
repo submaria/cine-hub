@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false" menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="center"> Detalhes do filme </ion-title>
+    <ion-button slot="end" fill="clear" [routerLink]="['/home']">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-content" appScrollbarTheme>
+  <ion-card class="ion-card custom-card">
+    <ion-card-content class="flex-container">
+      <div class="image-container">
+        <img src="https://image.tmdb.org/t/p/w500{{ poster_path }}" />
+      </div>
+      <div class="text-container">
+        <div class="title-container">
+          <ion-card-title>{{ title }}</ion-card-title>
+          <ion-card-subtitle>{{ original_title }} ({{ release_date }}) - <strong><ion-icon name="star-outline"></ion-icon> {{ vote_average }}</strong></ion-card-subtitle>
+        </div>
+        <ion-list>
+          <ion-text>
+            <div class="synopsis-container">
+              <p><strong>Sinopse:</strong> {{ overview }}</p>
+            </div>
+            <p><strong>Gêneros:</strong>
+              <ng-container *ngFor="let generos of genres; let last = last">
+                {{ generos.name }}{{ last ? '.' : ', ' }}
+              </ng-container>
+            </p>
+            <p><strong>Elenco:</strong>
+              <ng-container *ngFor="let elenco of cast; let last = last">
+                {{ elenco.name }}{{ last ? '.' : ', ' }}
+              </ng-container>
+            </p>
+            <p><strong>Duração: </strong>{{ runtime }}min</p>
+            <p><strong>Produção:</strong>
+              <ng-container *ngFor="let producao of production_companies; let last = last">
+                {{ producao.name }}{{ last ? '.' : ', ' }}
+              </ng-container>
+            </p>
+            <p><strong>País:</strong>
+              <ng-container *ngFor="let pais of production_countries; let last = last">
+                {{ pais.name }}{{ last ? '.' : ', ' }}
+              </ng-container>
+            </p>
+            <p><strong>Línguas faladas:</strong>
+              <ng-container *ngFor="let linguas of spoken_languages; let last = last">
+                {{ linguas.name }}{{ last ? '.' : ', ' }}
+              </ng-container>
+            </p>
+          </ion-text>
+        </ion-list>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,32 @@
+<body class="background">
+  <div class="card-center">
+    <ion-card class="card">
+      <ion-card-header>
+        <img src="../../../assets/images/logo_login.png" class="img-login" />
+      </ion-card-header>
+
+      <ion-card-content class="loginForm">
+        <form [formGroup]="loginForm" (ngSubmit)="tryLogin()">
+          <ion-row>
+            <ion-col size="12">
+              <ion-item>
+                <ion-label position="floating">Usuário</ion-label>
+                <ion-input type="text" id="usuario" formControlName="usuario" name="usuario" (keypress)="eventHandler($event.keyCode)"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col size="12">
+              <ion-item>
+                <ion-label position="floating">Senha</ion-label>
+                <ion-input id="senha" [type]="visible? 'password':'text'" formControlName="senha" name="senha" (keypress)="eventHandler($event.keyCode)"> </ion-input>
+                <ion-icon class="mg-top-30" [name]="visible? 'eye-off': 'eye'" slot="end" (click)="visible = !visible"></ion-icon>
+              </ion-item>
+            </ion-col>
+            <ion-col size="12">
+              <ion-button [disabled]="loginForm.invalid" type="submit" expand="block" shape="round" class="ion-padding" color="primary" (keypress)="eventHandler($event.keyCode)">Login</ion-button>
+            </ion-col>
+          </ion-row>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</body>

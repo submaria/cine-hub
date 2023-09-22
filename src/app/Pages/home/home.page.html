@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false" menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="center"> Melhores Filmes </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-content" appScrollbarTheme>
+  <ion-searchbar [(ngModel)]="searchQuery" (keyup.enter)="search()"></ion-searchbar>
+  <ion-progress-bar type="indeterminate" *ngIf="loading"></ion-progress-bar>
+
+  <ion-row>
+    <ion-col size-xs="12" size-sm="12" size-md="6" size-lg="3" size-xl="3" *ngFor="let item of filterResultApi">
+  <ion-card>
+    <img src="https://image.tmdb.org/t/p/w500/{{item.backdrop_path}}" />
+    <ion-card-header>
+      <ion-card-title>
+        <a [routerLink]="['/movie-details/', item.id]">{{item.title}}</a>
+      </ion-card-title>
+      <ion-card-subtitle><b>Nota: </b>{{item.vote_average}}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{item.overview}}
+    </ion-card-content>
+  </ion-card>
+</ion-col>
+</ion-row>
+<div class="pagination-buttons">
+  <ion-button (click)="loadMovies(currentPage - 1)" [disabled]="currentPage === 1">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+  </ion-button>
+  <ion-button (click)="loadMovies(currentPage + 1)">
+    <ion-icon name="arrow-forward-outline"></ion-icon>
+  </ion-button>
+</div>
+<div class="div-scrolltop-button">
+  <ion-button slot="icon-only" class="scrolltop-button" [disabled]="isScrollButtonDisabled" (click)="scrollToTop()">
+    <ion-icon name="arrow-up-outline"></ion-icon>
+  </ion-button>
+</div>
+</ion-content>

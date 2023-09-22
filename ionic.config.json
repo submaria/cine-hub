@@ -1,0 +1,7 @@
+{
+  "name": "picking-hipermassas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

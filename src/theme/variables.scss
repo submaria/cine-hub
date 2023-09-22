@@ -1,0 +1,892 @@
+:root {
+  --ion-background-color: #ffffff;
+  /** primary **/
+  --ion-color-primary: #f5821f;
+  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #d8721b;
+  --ion-color-primary-tint: #f68f35;
+  --ion-color-primary-linear-gradient: #d8721b;
+  --ion-color-primary-linear-gradient-rgba: rgba(252, 143, 0, 0.74);
+  /** secondary **/
+  --ion-color-secondary: #c5c5c546;
+  --ion-color-secondary-rgb: 61, 194, 255;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #36abe0;
+  --ion-color-secondary-tint: #50c8ff;
+  /** tertiary **/
+  --ion-color-tertiary: #000000;
+  --ion-color-tertiary-rgb: 82, 96, 255;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #4854e0;
+  --ion-color-tertiary-tint: #6370ff;
+  /** success **/
+  --ion-color-success: #2dd36f;
+  --ion-color-success-rgb: 45, 211, 111;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #28ba62;
+  --ion-color-success-tint: #42d77d;
+  /** warning **/
+  --ion-color-warning: #ffc409;
+  --ion-color-warning-rgb: 255, 196, 9;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #e0ac08;
+  --ion-color-warning-tint: #ffca22;
+  /** danger **/
+  --ion-color-danger: #ff0000;
+  --ion-color-danger-rgb: 235, 68, 90;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #cf3c4f;
+  --ion-color-danger-tint: #ed576b;
+  /** dark **/
+  --ion-color-dark: #222428;
+  --ion-color-dark-rgb: 34, 36, 40;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #1e2023;
+  --ion-color-dark-tint: #383a3e;
+  /** medium **/
+  --ion-color-medium: #92949c;
+  --ion-color-medium-rgb: 146, 148, 156;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #808289;
+  --ion-color-medium-tint: #9d9fa6;
+  /** light **/
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244, 245, 248;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #d7d8da;
+  --ion-color-light-tint: #f5f6f9;
+}
+
+// @media (prefers-color-scheme: dark) {
+
+/*
+* Dark Colors
+* -------------------------------------------
+*/
+
+// body[color-theme="dark"] {
+//   --ion-background-color: #292C35;
+//   --ion-color-primary: #f5821f;
+//   --ion-color-primary-rgb: 66, 140, 255;
+//   --ion-color-primary-contrast: #ffffff;
+//   --ion-color-primary-contrast-rgb: 255, 255, 255;
+//   --ion-color-primary-shade: #d8721b;
+//   --ion-color-primary-tint: #f68f35;
+//   --ion-color-secondary: #f5831f4f;
+//   --ion-color-secondary-rgb: 80, 200, 255;
+//   --ion-color-secondary-contrast: #ffffff;
+//   --ion-color-secondary-contrast-rgb: 255, 255, 255;
+//   --ion-color-secondary-shade: #46b0e0;
+//   --ion-color-secondary-tint: #62ceff;
+//   --ion-color-tertiary: #f5821f;
+//   --ion-color-tertiary-rgb: 106, 100, 255;
+//   --ion-color-tertiary-contrast: #ffffff;
+//   --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+//   --ion-color-tertiary-shade: #d8721b;
+//   --ion-color-tertiary-tint: #f68f35;
+//   --ion-color-success: #2fdf75;
+//   --ion-color-success-rgb: 47, 223, 117;
+//   --ion-color-success-contrast: #292C35;
+//   --ion-color-success-contrast-rgb: 0, 0, 0;
+//   --ion-color-success-shade: #29c467;
+//   --ion-color-success-tint: #44e283;
+//   --ion-color-warning: #ffd534;
+//   --ion-color-warning-rgb: 255, 213, 52;
+//   --ion-color-warning-contrast: #292C35;
+//   --ion-color-warning-contrast-rgb: 0, 0, 0;
+//   --ion-color-warning-shade: #e0bb2e;
+//   --ion-color-warning-tint: #ffd948;
+//   --ion-color-danger: #ff0000;
+//   --ion-color-danger-rgb: 255, 73, 97;
+//   --ion-color-danger-contrast: #ffffff;
+//   --ion-color-danger-contrast-rgb: 255, 255, 255;
+//   --ion-color-danger-shade: #e04055;
+//   --ion-color-danger-tint: #ff5b71;
+//   --ion-color-dark: #f4f5f8;
+//   --ion-color-dark-rgb: 244, 245, 248;
+//   --ion-color-dark-contrast: #292C35;
+//   --ion-color-dark-contrast-rgb: 0, 0, 0;
+//   --ion-color-dark-shade: #d7d8da;
+//   --ion-color-dark-tint: #f5f6f9;
+//   --ion-color-medium: #989aa2;
+//   --ion-color-medium-rgb: 152, 154, 162;
+//   --ion-color-medium-contrast: #292C35;
+//   --ion-color-medium-contrast-rgb: 0, 0, 0;
+//   --ion-color-medium-shade: #86888f;
+//   --ion-color-medium-tint: #a2a4ab;
+//   --ion-color-light: #1E1E1E;
+//   --ion-color-light-rgb: 34, 36, 40;
+//   --ion-color-light-contrast: #ffffff;
+//   --ion-color-light-contrast-rgb: 255, 255, 255;
+//   --ion-color-light-shade: #292C35;
+//   --ion-color-light-tint: #383a3e;
+// }
+
+
+/*
+* iOS Dark Theme
+* -------------------------------------------
+*/
+
+// .ios body [color-theme="dark"] {
+//   --ion-background-color: #292C35;
+//   --ion-background-color-rgb: 0, 0, 0;
+//   --ion-text-color: #ffffff;
+//   --ion-text-color-rgb: 255, 255, 255;
+//   --ion-color-step-50: #0d0d0d;
+//   --ion-color-step-100: #1a1a1a;
+//   --ion-color-step-150: #262626;
+//   --ion-color-step-200: #333333;
+//   --ion-color-step-250: #404040;
+//   --ion-color-step-300: #4d4d4d;
+//   --ion-color-step-350: #595959;
+//   --ion-color-step-400: #666666;
+//   --ion-color-step-450: #737373;
+//   --ion-color-step-500: #808080;
+//   --ion-color-step-550: #8c8c8c;
+//   --ion-color-step-600: #999999;
+//   --ion-color-step-650: #a6a6a6;
+//   --ion-color-step-700: #b3b3b3;
+//   --ion-color-step-750: #bfbfbf;
+//   --ion-color-step-800: #cccccc;
+//   --ion-color-step-850: #d9d9d9;
+//   --ion-color-step-900: #e6e6e6;
+//   --ion-color-step-950: #f2f2f2;
+//   --ion-item-background: #292C35;
+//   --ion-card-background: #1c1c1d;
+// }
+
+// .ios ion-modal[color-theme="dark"] {
+//   --ion-background-color: var(--ion-color-step-100);
+//   --ion-toolbar-background: var(--ion-color-step-150);
+//   --ion-toolbar-border-color: var(--ion-color-step-250);
+// }
+
+
+/*
+* Material Design Dark Theme
+* -------------------------------------------
+*/
+
+// .md body[color-theme="dark"] {
+//   --ion-background-color: #292C35;
+//   --ion-background-color-rgb: 18, 18, 18;
+//   --ion-text-color: #ffffff;
+//   --ion-text-color-rgb: 255, 255, 255;
+//   --ion-border-color: #292C35;
+//   --ion-color-step-50: #292C35;
+//   --ion-color-step-100: #2a2a2a;
+//   --ion-color-step-150: #363636;
+//   --ion-color-step-200: #414141;
+//   --ion-color-step-250: #4d4d4d;
+//   --ion-color-step-300: #595959;
+//   --ion-color-step-350: #656565;
+//   --ion-color-step-400: #717171;
+//   --ion-color-step-450: #7d7d7d;
+//   --ion-color-step-500: #898989;
+//   --ion-color-step-550: #949494;
+//   --ion-color-step-600: #a0a0a0;
+//   --ion-color-step-650: #acacac;
+//   --ion-color-step-700: #b8b8b8;
+//   --ion-color-step-750: #c4c4c4;
+//   --ion-color-step-800: #d0d0d0;
+//   --ion-color-step-850: #dbdbdb;
+//   --ion-color-step-900: #e7e7e7;
+//   --ion-color-step-950: #f3f3f3;
+//   --ion-item-background: #292C35;
+//   --ion-toolbar-background: #292C35;
+//   --ion-tab-bar-background: #292C35;
+//   --ion-card-background: #292C35;
+// }
+
+hr {
+  background: var(--ion-color-primary);
+  border: solid 1px var(--ion-color-primary);
+}
+
+// Scrollbar styles
+//Firefox
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #f5831fc6;
+}
+
+//Chrome, Edge, and Safari
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #adb5bd5d;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #f5831f88;
+  border-radius: 20px;
+  border: 3px black;
+}
+
+//MARGIN
+.mg-top-none {
+  margin: 0px;
+}
+
+.mg-top {
+  margin-top: auto;
+}
+
+.mg-top-5 {
+  margin-top: 5px;
+}
+
+.mg-top-10 {
+  margin-top: 10px;
+}
+
+.mg-top-15 {
+  margin-top: 15px;
+}
+
+.mg-top-20 {
+  margin-top: 20px;
+}
+
+.mg-top-30 {
+  margin-top: 30px;
+}
+
+.mg-top-5-percent {
+  margin-top: 5%;
+}
+
+.mg-top-10-percent {
+  margin-top: 10%;
+}
+
+.mg-top-20-percent {
+  margin-top: 20%;
+}
+
+.mg-top-30-percent {
+  margin-top: 30%;
+}
+
+.mg-bottom {
+  margin-bottom: auto;
+}
+
+.mg-bottom-5 {
+  margin-bottom: 5px;
+}
+
+.mg-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.mg-bottom-15 {
+  margin-bottom: 15px;
+}
+
+.mg-bottom-20 {
+  margin-bottom: 20px;
+}
+
+.mg-bottom-30 {
+  margin-bottom: 30px;
+}
+
+.mg-bottom-5-percent {
+  margin-bottom: 5%;
+}
+
+.mg-bottom-10-percent {
+  margin-bottom: 10%;
+}
+
+.mg-bottom-20-percent {
+  margin-bottom: 20%;
+}
+
+.mg-bottom-30-percent {
+  margin-bottom: 30%;
+}
+
+.mg-left {
+  margin-left: auto;
+}
+
+.mg-left-5 {
+  margin-left: 5px;
+}
+
+.mg-left-10 {
+  margin-left: 10px;
+}
+
+.mg-left-15 {
+  margin-left: 15px;
+}
+
+.mg-left-20 {
+  margin-left: 20px;
+}
+
+.mg-left-30 {
+  margin-left: 30px;
+}
+
+.mg-left-5-percent {
+  margin-left: 5%;
+}
+
+.mg-left-10-percent {
+  margin-left: 10%;
+}
+
+.mg-left-20-percent {
+  margin-left: 20%;
+}
+
+.mg-left-30-percent {
+  margin-left: 30%;
+}
+
+.mg-right {
+  margin-right: auto;
+}
+
+.mg-right-5 {
+  margin-right: 5px;
+}
+
+.mg-right-10 {
+  margin-right: 10px;
+}
+
+.mg-right-20 {
+  margin-right: 20px;
+}
+
+.mg-right-30 {
+  margin-right: 30px;
+}
+
+.mg-right-5-percent {
+  margin-right: 5%;
+}
+
+.mg-right-10-percent {
+  margin-right: 10%;
+}
+
+.mg-right-20-percent {
+  margin-right: 20%;
+}
+
+.mg-right-30-percent {
+  margin-right: 30%;
+}
+
+//PADDING
+.pd-none {
+  padding: 0px;
+}
+
+.pd-top {
+  padding-top: auto;
+}
+
+.pd-top-5 {
+  padding-top: 5px;
+}
+
+.pd-top-10 {
+  padding-top: 10px;
+}
+
+.pd-top-20 {
+  padding-top: 20px;
+}
+
+.pd-top-25 {
+  padding-top: 25px;
+}
+
+.pd-top-30 {
+  padding-top: 30px;
+}
+
+.pd-top-5-percent {
+  padding-top: 5%;
+}
+
+.pd-top-10-percent {
+  padding-top: 10%;
+}
+
+.pd-top-20-percent {
+  padding-top: 20%;
+}
+
+.pd-top-30-percent {
+  padding-top: 30%;
+}
+
+.pd-bottom {
+  padding-bottom: auto;
+}
+
+.pd-bottom-5 {
+  padding-bottom: 5px;
+}
+
+.pd-bottom-10 {
+  padding-bottom: 10px;
+}
+
+.pd-bottom-20 {
+  padding-bottom: 20px;
+}
+
+.pd-bottom-30 {
+  padding-bottom: 30px;
+}
+
+.pd-bottom-5-percent {
+  padding-bottom: 5%;
+}
+
+.pd-bottom-10-percent {
+  padding-bottom: 10%;
+}
+
+.pd-bottom-20-percent {
+  padding-bottom: 20%;
+}
+
+.pd-bottom-30-percent {
+  padding-bottom: 30%;
+}
+
+.pd-left {
+  padding-left: auto;
+}
+
+.pd-left-5 {
+  padding-left: 5px;
+}
+
+.pd-left-10 {
+  padding-left: 10px;
+}
+
+.pd-left-20 {
+  padding-left: 20px;
+}
+
+.pd-left-30 {
+  padding-left: 30px;
+}
+
+.pd-left-5-percent {
+  padding-left: 5%;
+}
+
+.pd-left-10-percent {
+  padding-left: 10%;
+}
+
+.pd-left-20-percent {
+  padding-left: 20%;
+}
+
+.pd-left-30-percent {
+  padding-left: 30%;
+}
+
+.pd-right {
+  padding-right: auto;
+}
+
+.pd-right-5 {
+  padding-right: 5px;
+}
+
+.pd-right-10 {
+  padding-right: 10px;
+}
+
+.pd-right-20 {
+  padding-right: 20px;
+}
+
+.pd-right-30 {
+  padding-right: 30px;
+}
+
+.pd-right-5-percent {
+  padding-right: 5%;
+}
+
+.pd-right-10-percent {
+  padding-right: 10%;
+}
+
+.pd-right-20-percent {
+  padding-right: 20%;
+}
+
+.pd-right-30-percent {
+  padding-right: 30%;
+}
+
+.pd-10 {
+  padding: 10px;
+}
+
+.pd-20 {
+  padding: 20px;
+}
+
+//ALIGN
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.font-size8 {
+  font-size: 8px;
+}
+
+.font-size12 {
+  font-size: 12px;
+}
+
+.font-size14 {
+  font-size: 14px;
+}
+
+.font-size16 {
+  font-size: 16px;
+}
+
+.font-size18 {
+  font-size: 18px;
+}
+
+.font-size24 {
+  font-size: 24px;
+}
+
+.font-size32 {
+  font-size: 32px;
+}
+
+.font-weight600 {
+  font-weight: 600;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.text-warp {
+  overflow-wrap: break-word;
+}
+
+.infoAlert {
+  .alert-message.sc-ion-alert-md {
+    padding: 20px !important;
+  }
+}
+
+ion-header {
+  ion-toolbar {
+    ion-col {
+      padding: 0;
+
+      ion-button {
+        margin: 0;
+
+        ion-icon {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}
+
+.content-footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+.justify-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+======================================
+============ FORM STYLES =============
+======================================
+*/
+
+
+.formCssError {
+  font: message-box;
+  font-size: 12px;
+  font-weight: bold;
+  color: red;
+  border-radius: 0px 0px 10px 10px;
+  background-color: #f2dede;
+  padding: 10px;
+}
+
+/*
+======================================
+========= BACKGROUND STYLES ==========
+======================================
+*/
+
+.bg-red {
+  background: red;
+}
+
+.bg-success {
+  background-color: rgba(34, 177, 76, 1);
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+.bg-danger {
+  background-color: rgba(201, 16, 26, 1);
+  color: rgba(255, 255, 255, 1) !important;
+
+}
+
+.bg-warning {
+  background-color: rgba(240, 231, 1, 1);
+  color: rgba(0, 0, 0, 1) !important;
+
+}
+
+/*
+======================================
+========== ION-INPUT STYLES ==========
+======================================
+*/
+
+.input-barcode {
+  border-radius: 10px !important;
+  border: 1px solid #c7c7c7 !important;
+}
+
+.input-bootstrap {
+  border-radius: 10px !important;
+  border: 1px solid #c7c7c7 !important;
+}
+
+.item-input-bootstrap {
+  padding-top: 10px;
+
+  ion-input {
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px !important;
+    border: 1px solid #c7c7c7 !important;
+  }
+}
+
+/*
+======================================
+========== ION-BUTTON STYLES ==========
+======================================
+*/
+
+ion-button {
+  color: white;
+}
+
+.btn-footer {
+  width: 80%;
+}
+
+.btn-footer-outline {
+  width: 80%;
+  color: black;
+}
+
+.btn-footer-outline:focus {
+  background: var(--ion-color-primary);
+  color: var(--ion-color-light);
+  border-radius: 25px;
+}
+
+.btn-footer-outline.ion-focused {
+  background: var(--ion-color-primary);
+  color: var(--ion-color-light);
+  border-radius: 25px;
+}
+
+/*
+======================================
+========= ION-LOADING STYLES =========
+======================================
+*/
+.loadingFull {
+  .sc-ion-loading-md {
+    --max-height: 100%;
+    --min-width: 100%;
+  }
+
+  .loading-wrapper {
+    height: 100%;
+    width: 100%;
+
+    .loading-spinner {
+      ion-spinner {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
+
+}
+
+/*
+=======================================
+======= IONIC-DATETITME STYLES ========
+=======================================
+*/
+
+ion-datetime {
+  color: black !important;
+}
+
+
+/*
+======================================
+======== NGX-DATATABLE STYLES ========
+======================================
+*/
+
+ngx-datatable {
+  top: 1.5rem;
+  margin: 10px;
+
+  datatable-header,
+  datatable-header-cell,
+  .datatable-row-center,
+  .datatable-header-inner {
+    width: 100% !important;
+  }
+
+  .btnColapseTable {
+    text-decoration: none;
+  }
+}
+
+datatable-header-cell.datatable-header-cell {
+  font-weight: 900 !important;
+  color: black !important;
+  text-align: center !important;
+  white-space: pre !important;
+  background-color: #c7c7c7 !important;
+  padding: 5px !important;
+}
+
+.datatable-body-cell.datatable-body-cell.sort-active {
+  padding: 5px !important;
+  text-align: center !important;
+  border-bottom: 1px solid #c7c7c7;
+}
+
+datatable-scroller.datatable-scroll {
+  width: 100% !important;
+}
+
+ion-item {
+  --background-hover: var(--ion-color-primary);
+  --color-hover: var(--ion-color-primary);
+  --highlight-color-valid: var(--ion-color-primary);
+}
+
+/*
+======================================
+======== NGX-DATATABLE STYLES ========
+======================================
+*/
+.radioModal {
+  --height: 420px !important;
+  --width: 96% !important;
+  --border: solid;
+  --backdrop-opacity: 0;
+  --box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+  backdrop-filter: blur(2px);
+}
+
+.modalQuantidade {
+  --height: 90% !important;
+  --width: 90% !important;
+  --border: solid;
+  --backdrop-opacity: 0;
+  --box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+  backdrop-filter: blur(2px);
+}
+
+.alertHome .alert-wrapper {
+  .alert-head {
+    .alert-title {
+      text-align: center;
+    }
+  }
+
+  .alert-message {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .alert-button-group {
+    display: block;
+
+    button#btnOkLabel {
+      background-color: var(--ion-color-primary);
+      color: var(--ion-color-light);
+      margin-left: 70px;
+    }
+
+    .alert-button {
+      text-align: center;
+      border-radius: 10px;
+      width: 45%;
+
+      .alert-button-inner.sc-ion-alert-md {
+        display: inline;
+      }
+    }
+  }
+}
