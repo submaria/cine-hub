@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MenuController, IonContent } from '@ionic/angular';
 import { FormHomeInterface } from 'src/app/Pages/home/Interface/home.interface';
@@ -17,16 +17,7 @@ export class HomePage implements OnInit {
   searchQuery: string = '';
   loading = true;
   currentPage: number = 1;
-  isScrollButtonDisabled = true;
   @ViewChild(IonContent) content: IonContent;
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const yOffset = window.scrollY
-    console.log(scrollY)
-
-    // Defina uma altura limite para habilitar o botão, por exemplo, 100 pixels
-    this.isScrollButtonDisabled = yOffset < 100;
-  }
 
   constructor(
     private menuCtrl: MenuController,
@@ -113,7 +104,7 @@ export class HomePage implements OnInit {
     };
 
     scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      this.content.scrollToTop(500);
     }
 
   //CONTROLS
