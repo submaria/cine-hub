@@ -56,3 +56,35 @@ img {
   padding-bottom: 5px;
   margin-bottom: 10px;
 }
+
+.scroll-container {
+  border: 2px solid silver;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  &.hide-scrollbar {
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &.show-scroll {
+    overflow: auto;
+  }
+
+  .div-similar {
+    white-space: nowrap;
+    background: #efefef;
+    border: 1px solid #efefef;
+    margin: .1rem;
+    padding: .2rem .7rem;
+    &:hover {
+      cursor: pointer;
+      border-color: #ccc;
+    }
+
+}
+
+}

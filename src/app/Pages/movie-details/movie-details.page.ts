@@ -30,6 +30,7 @@ export class MovieDetailsPage implements OnInit {
   overview: any[];
   cast: any[];
   runtime: any[];
+  scrollSimilar: any[];
 
   constructor(
     private route: ActivatedRoute,
@@ -44,6 +45,7 @@ export class MovieDetailsPage implements OnInit {
     console.log(this.filmeId);
     this.loadMovieDetails(this.filmeId);
     this.loadMovieCast(this.filmeId);
+    this.loadSimilarMovies(this.filmeId);
   }
 
   async loadMovieDetails(id: number) {
@@ -70,7 +72,15 @@ export class MovieDetailsPage implements OnInit {
     await this.http.getMovieCast(id).then((result: any) => {
       this.loading = false;
       this.cast = result.cast.slice(0,15);
-      console.log(this.cast);
+    });
+  }
+
+  async loadSimilarMovies(id: number) {
+    await this.http.getSimilarMovies(id).then((result: any) => {
+      this.loading = false;
+      this.scrollSimilar = result.results;
+      console.log(id)
+      console.log(this.scrollSimilar);
     });
   }
 

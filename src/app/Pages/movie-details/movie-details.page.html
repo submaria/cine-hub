@@ -36,7 +36,7 @@
                 {{ elenco.name }}{{ last ? '.' : ', ' }}
               </ng-container>
             </p>
-            <p><strong>Duração: </strong>{{ runtime }}min</p>
+            <p><strong>Duração: </strong>{{ runtime }} min</p>
             <p><strong>Produção:</strong>
               <ng-container *ngFor="let producao of production_companies; let last = last">
                 {{ producao.name }}{{ last ? '.' : ', ' }}
@@ -57,4 +57,9 @@
       </div>
     </ion-card-content>
   </ion-card>
+  <div class="scroll-container div-similar" style="overflow: auto">
+    <div *ngFor="let item of scrollSimilar">
+      <img src="https://image.tmdb.org/t/p/w500{{ item.poster_path }}" />
+    </div>
+  </div>
 </ion-content>
