@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false" menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="center"> Filmes Populares </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-content" appScrollbarTheme>
+  <ion-searchbar [(ngModel)]="searchQuery" (keyup.enter)="search()"></ion-searchbar>
+  <ion-progress-bar type="indeterminate" *ngIf="loading"></ion-progress-bar>
+
+  <ion-row>
+    <ion-col size-xs="12" size-sm="12" size-md="6" size-lg="3" size-xl="3" *ngFor="let item of resultApi">
+  <ion-card>
+    <img src="https://image.tmdb.org/t/p/w500/{{item.backdrop_path}}" />
+    <ion-card-header>
+      <ion-card-title>
+        <a [routerLink]="['/movie-details/', item.id]">{{item.title}}</a>
+      </ion-card-title>
+      <ion-card-subtitle><b>Nota: </b>{{item.vote_average}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      {{item.overview}}
+    </ion-card-content>
+  </ion-card>
+</ion-col>
+</ion-row>
+</ion-content>

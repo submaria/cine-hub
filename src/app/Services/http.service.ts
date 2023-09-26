@@ -39,8 +39,6 @@ export class HttpService {
       .then((retorno: any) => retorno);
   }
 
-  //MOVIES API
-
   async getMoviesTopRated(page: number = 1) {
     return await this.http
       .get(`https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=pt-BR&page=${page}`)
@@ -79,6 +77,13 @@ export class HttpService {
   async getSimilarMovies(id: number) {
     return await this.http
       .get(`https://api.themoviedb.org/3/movie/${id}/similar?api_key=${API_KEY}&language=pt-br&page=1`)
+      .toPromise()
+      .then((retorno: any) => retorno);
+  }
+
+  async getPopularMovies() {
+    return await this.http
+      .get(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=pt-BR&page=1`)
       .toPromise()
       .then((retorno: any) => retorno);
   }
