@@ -19,36 +19,53 @@
       <div class="text-container">
         <div class="title-container">
           <ion-card-title>{{ title }}</ion-card-title>
-          <ion-card-subtitle>{{ original_title }} ({{ release_date }}) - <strong><ion-icon name="star-outline"></ion-icon> {{ vote_average }}</strong></ion-card-subtitle>
+          <ion-card-subtitle
+            >{{ original_title }} ({{ release_date }}) -
+            <strong
+              ><ion-icon name="star-outline"></ion-icon> {{ vote_average
+              }}</strong
+            ></ion-card-subtitle
+          >
         </div>
         <ion-list>
           <ion-text>
             <div class="synopsis-container">
               <p><strong>Sinopse:</strong> {{ overview }}</p>
             </div>
-            <p><strong>Gêneros:</strong>
+            <p>
+              <strong>Gêneros:</strong>
               <ng-container *ngFor="let generos of genres; let last = last">
                 {{ generos.name }}{{ last ? '.' : ', ' }}
               </ng-container>
             </p>
-            <p><strong>Elenco:</strong>
+            <p>
+              <strong>Elenco:</strong>
               <ng-container *ngFor="let elenco of cast; let last = last">
                 {{ elenco.name }}{{ last ? '.' : ', ' }}
               </ng-container>
             </p>
             <p><strong>Duração: </strong>{{ runtime }} min</p>
-            <p><strong>Produção:</strong>
-              <ng-container *ngFor="let producao of production_companies; let last = last">
+            <p>
+              <strong>Produção:</strong>
+              <ng-container
+                *ngFor="let producao of production_companies; let last = last"
+              >
                 {{ producao.name }}{{ last ? '.' : ', ' }}
               </ng-container>
             </p>
-            <p><strong>País:</strong>
-              <ng-container *ngFor="let pais of production_countries; let last = last">
+            <p>
+              <strong>País:</strong>
+              <ng-container
+                *ngFor="let pais of production_countries; let last = last"
+              >
                 {{ pais.name }}{{ last ? '.' : ', ' }}
               </ng-container>
             </p>
-            <p><strong>Línguas faladas:</strong>
-              <ng-container *ngFor="let linguas of spoken_languages; let last = last">
+            <p>
+              <strong>Línguas faladas:</strong>
+              <ng-container
+                *ngFor="let linguas of spoken_languages; let last = last"
+              >
                 {{ linguas.name }}{{ last ? '.' : ', ' }}
               </ng-container>
             </p>
@@ -57,9 +74,18 @@
       </div>
     </ion-card-content>
   </ion-card>
-  <div class="scroll-container div-similar" style="overflow: auto">
+  <div class="scroll-container div-similar">
     <div *ngFor="let item of scrollSimilar">
       <img src="https://image.tmdb.org/t/p/w500{{ item.poster_path }}" />
     </div>
+  </div>
+  <div class="grid-container">
+    <ion-row class="scroll-row">
+      <ion-col size="12">
+        <ion-card class="grid-item" *ngFor="let item of scrollSimilar">
+          <img src="https://image.tmdb.org/t/p/w500/{{item.poster_path}}" />
+        </ion-card>
+      </ion-col>
+    </ion-row>
   </div>
 </ion-content>

@@ -1,15 +1,16 @@
 .ion-content {
   --offset-top: 56px;
   --offset-bottom: 0px;
-  --background: url('../../../assets/images/background.png') no-repeat 0 0/100% 100% !important;
-};
+  --background: url("../../../assets/images/background.png") no-repeat 0 0/100%
+    100% !important;
+}
 
-.ion-card{
+.ion-card {
   max-width: 80%;
   margin: 0 auto;
 }
 
-.custom-card{
+.custom-card {
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -25,7 +26,7 @@
 
 .flex-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .image-container {
@@ -36,6 +37,7 @@
 .text-container {
   flex: 2;
   margin-right: 5px;
+  justify-content: space-between;
 }
 
 img {
@@ -61,30 +63,27 @@ img {
   border: 2px solid silver;
   display: flex;
   align-items: center;
-  overflow: hidden;
-
-  &.hide-scrollbar {
-    overflow: auto;
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-
-  &.show-scroll {
-    overflow: auto;
-  }
+  overflow-x: auto;
+  width: calc(2 * (100% + 0.2rem));
 
   .div-similar {
     white-space: nowrap;
     background: #efefef;
     border: 1px solid #efefef;
-    margin: .1rem;
-    padding: .2rem .7rem;
-    &:hover {
-      cursor: pointer;
-      border-color: #ccc;
-    }
-
+    margin: 0.1rem;
+    padding: 0.2rem 0.7rem;
+  }
 }
 
+.grid-container {
+  overflow-x: auto; /* Adiciona rolagem horizontal */
+  white-space: nowrap; /* Impede a quebra de linha dos itens */
 }
+
+
+.grid-item {
+  display: inline-block; /* Exibe os itens em linha */
+  width: 150px; /* Largura de cada item */
+  height: auto; /* Altura automática (ajuste conforme necessário) */
+}
+
